@@ -1,0 +1,23 @@
+<div class="arena">
+  <div *ngFor="let row of arena; let i = index" class="arena-row clear">
+    <app-terrain *ngFor="let col of row; let j = index"
+      [name]="col.toString()"
+      (click)="setTarget(col, i, j)"
+    >
+    </app-terrain>
+  </div>
+
+  <absolute-object
+    className="character"
+    [top]="80 * character.x + 15"
+    [left]="80 * character.y + 15"
+  >
+  </absolute-object>
+
+  <absolute-object
+    className="target"
+    [top]="80 * character.targetX + 32"
+    [left]="80 * character.targetY + 32"
+  >
+  </absolute-object>
+</div>

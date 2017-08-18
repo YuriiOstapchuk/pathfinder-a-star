@@ -1,0 +1,29 @@
+.terrain {
+  float: left;
+  position: relative;
+
+  width: 80px;
+  height: 80px;
+
+  padding: 5px;
+
+  transition: border-color .15s;
+}
+
+.terrain:not(.wall):hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
+  z-index: 1;
+}
+
+.terrain.wall {
+  background-color: #6A6A6A;
+}
+
+.terrain.g-1 {
+  background-color: #CDCBCC;
+}
+
+.terrain.g-2 {
+  background-color: #A8A8A8;
+}
