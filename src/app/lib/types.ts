@@ -1,28 +1,28 @@
 export interface Point {
-  x: number,
-  y: number,
+  x: number;
+  y: number;
 }
 
 export interface Character extends Point {
-  targetX: number,
-  targetY: number,
-  path: Point[],
+  targetX: number;
+  targetY: number;
+  path: Point[];
 }
 
-export interface Terrain {}
-
-export class Wall implements Terrain {
+export class Wall {
   public toString() {
     return 'Wall';
   }
 }
 
-export class Ground implements Terrain {
-  constructor(public level: number) { }
+export class Ground {
+  constructor(public level: number) {}
 
   public toString() {
     return `G ${this.level}`;
   }
 }
+
+export type Terrain = Wall | Ground;
 
 export type Arena = Terrain[][];

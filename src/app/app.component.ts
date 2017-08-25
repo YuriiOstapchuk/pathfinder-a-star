@@ -24,8 +24,8 @@ export class AppComponent implements OnInit, OnDestroy {
   arena: Arena = [
     [new Wall, new Wall, new Wall, new Wall, new Wall, new Wall, new Wall, new Wall],
     [new Wall, new G(1), new G(1), new G(1), new G(1), new Wall, new G(1), new Wall],
-    [new Wall, new G(1), new Wall, new G(2), new G(1), new Wall, new G(1), new Wall],
-    [new Wall, new G(1), new G(1), new G(1), new G(1), new Wall, new G(1), new Wall],
+    [new Wall, new G(1), new G(2), new G(2), new G(1), new Wall, new G(1), new Wall],
+    [new Wall, new Wall, new Wall, new G(2), new G(1), new Wall, new G(1), new Wall],
     [new Wall, new G(1), new G(1), new G(1), new G(1), new G(2), new G(1), new Wall],
     [new Wall, new G(1), new G(1), new Wall, new Wall, new Wall, new G(1), new Wall],
     [new Wall, new G(1), new G(1), new G(1), new G(1), new G(1), new G(1), new Wall],
@@ -48,8 +48,6 @@ export class AppComponent implements OnInit, OnDestroy {
       characterX: this.character.x,
       characterY: this.character.y,
     });
-
-    console.log(path);
 
     this.character.path = path;
     this.character.targetX = x;
